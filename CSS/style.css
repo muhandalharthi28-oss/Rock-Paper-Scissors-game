@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'DM Sans', sans-serif;
+  color: #f5f3ff;
+  background: #10101a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(115 82 255 / 24%), transparent 48%),
+    #10101a;
+}
+
+main {
+  width: min(100%, 680px);
+  text-align: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.title h1 span {
+  color: #a795ff;
+}
+
+.container {
+  margin-top: 36px;
+  padding: clamp(24px, 6vw, 48px);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 5%);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #a795ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.container h2 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+button {
+  min-width: 132px;
+  padding: 14px 20px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 14px;
+  color: #f5f3ff;
+  background: #222131;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  border-color: #a795ff;
+  background: #302b4a;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid #a795ff;
+  outline-offset: 3px;
+}
+
+#result {
+  min-height: 1.6em;
+  margin-top: 28px;
+  color: #d4d0e5;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 26px;
+  }
+
+  .choices {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

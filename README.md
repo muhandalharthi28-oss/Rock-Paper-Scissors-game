@@ -1,8 +1,21 @@
-# Rock-Paper-Scissors-game
-Hi!👋
+# Rock, Paper, Scissors
 
+A simple browser version of the classic Rock, Paper, Scissors game, built as part of [The Odin Project](https://www.theodinproject.com/).
 
-This is my Odin Project it is a famous game called Rock Paper Scissors 🪨 📖 ✂️ 
+Choose Rock, Paper, or Scissors to play a round against the computer. The result appears on the page after each choice.
 
-But for now you can  play this game only  in the console💔 maybe in the next project i will add GUI for this Game .
+## Play
 
+Open [`HTML/index.html`](HTML/index.html) in your web browser. No installation or build step is required.
+
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+
+## Project files
+
+- `HTML/index.html` — game page
+- `CSS/style.css` — page styling
+- `Script.js` — game logic
