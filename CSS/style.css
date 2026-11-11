@@ -70,6 +70,19 @@ main {
   letter-spacing: -0.04em;
 }
 
+.score-label {
+  margin: 24px 0 6px;
+  color: #a7a3bb;
+  font-size: 0.9rem;
+}
+
+.score {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .choices {
   display: flex;
   justify-content: center;
@@ -104,6 +117,12 @@ button:active {
 button:focus-visible {
   outline: 3px solid #a795ff;
   outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
 }
 
 #result {

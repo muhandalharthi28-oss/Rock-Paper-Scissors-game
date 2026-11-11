@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Home</title>
+    <meta name="description" content="Play Rock, Paper, Scissors against the computer. First to five points wins.">
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
     <header>
@@ -17,12 +18,14 @@
     <div class="container">
         <p class="eyebrow">A quick game of chance</p>
         <h2>Choose your move</h2>
+        <p class="score-label">First to 5 points wins</p>
+        <div id="score" class="score" aria-live="polite">You 0 — 0 Computer</div>
         <div class="choices">
             <button id="Rock" type="button">Rock</button>
             <button id="Paper" type="button">Paper</button>
             <button id="Scissors" type="button">Scissors</button>
         </div>
-        <div id="result" aria-live="polite">Make your move to play.</div>
+        <div id="result" role="status" aria-live="polite">Make your move to play.</div>
     </div>
     </main>
 

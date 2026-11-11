@@ -1,22 +1,19 @@
-const Rock = document.getElementById('Rock');
-const Paper = document.getElementById('Paper');
-const Scissors = document.getElementById('Scissors');
-
+const choices = ['Rock', 'Paper', 'Scissors'];
+const choiceButtons = document.querySelectorAll('.choices button');
+const score = document.getElementById('score');
 const result = document.getElementById('result');
+const playerScore = { player: 0, computer: 0 };
+const winningScore = 5;
 
 function getComputerChoice() {
-  let computerChoice = Math.floor(Math.random() * 3) + 1;
-  if (computerChoice === 1) {
-    return 'Rock';
-  } else if (computerChoice === 2) {
-    return 'Paper';
-  } else {
-    return 'Scissors';
-  }
+  return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function playRound(e) {
-  const playerChoice = e.currentTarget.id;
+function playRound(playerChoice) {
+  if (playerScore.player === winningScore || playerScore.computer === winningScore) {
+    return;
+  }
+
   const computerChoice = getComputerChoice();
 
   if (playerChoice === computerChoice) {
@@ -26,12 +23,24 @@ function playRound(e) {
     (playerChoice === 'Paper' && computerChoice === 'Rock') ||
     (playerChoice === 'Scissors' && computerChoice === 'Paper')
   ) {
+    playerScore.player += 1;
     result.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
   } else {
+    playerScore.computer += 1;
     result.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
+  }
+
+  score.textContent = `You ${playerScore.player} — ${playerScore.computer} Computer`;
+
+  if (playerScore.player === winningScore || playerScore.computer === winningScore) {
+    const winner = playerScore.player === winningScore ? 'You win the game!' : 'The computer wins the game!';
+    result.textContent += ` ${winner}`;
+    choiceButtons.forEach((button) => {
+      button.disabled = true;
+    });
   }
 }
 
-Rock.addEventListener('click', playRound)
-Paper.addEventListener('click', playRound)
-Scissors.addEventListener('click', playRound)
+choiceButtons.forEach((button) => {
+  button.addEventListener('click', () => playRound(button.id));
+});
