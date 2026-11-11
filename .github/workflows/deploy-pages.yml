@@ -30,10 +30,9 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir -p _site
-          cp HTML/index.html _site/index.html
+          cp index.html _site/index.html
           cp Script.js _site/Script.js
           cp -R CSS _site/CSS
-          sed -i 's#../CSS/style.css#CSS/style.css#; s#../Script.js#Script.js#' _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

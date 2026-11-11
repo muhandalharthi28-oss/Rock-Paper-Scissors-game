@@ -8,7 +8,7 @@ Choose Rock, Paper, or Scissors to play against the computer. The first player t
 
 ## Play
 
-Open [`HTML/index.html`](HTML/index.html) in your web browser. No installation or build step is required.
+Open [`index.html`](index.html) in your web browser. No installation or build step is required.
 
 ## Built with
 
@@ -18,6 +18,6 @@ Open [`HTML/index.html`](HTML/index.html) in your web browser. No installation o
 
 ## Project files
 
-- `HTML/index.html` — game page
+- `index.html` — game page
 - `CSS/style.css` — page styling
 - `Script.js` — game logic
